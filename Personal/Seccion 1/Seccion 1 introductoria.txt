@@ -1,0 +1,10 @@
+Diferentes modos en vim
+
+- Normal mode --> command mode, es interpretado como un comando, son case sensitive (Este es el por defecto, cuando se abre vim)
+- Insert mode --> presionar lower case "i" o "a"
+- line mode --> o command line mode, tipear un ":"
+- y hay mas modes ...
+
+:q! --> sale de vim
+vim abc123 --> crea un archivo con ese nombre
+:wq --> salvar el archivo y salir (write and quit)

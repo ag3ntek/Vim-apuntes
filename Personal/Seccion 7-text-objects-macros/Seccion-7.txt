@@ -1,0 +1,41 @@
+ "daw" --> es como borra una palabra completa no importa donde este ubicado el cursor, este es diferente al comando "dw" que mi cursor esta en medio de una palabra, borra desde donde este, hasta el final de la palabra. (daw borra tambien el espacio que esta despues de la palabra)
+
+"diw" --> es como delte inner word, hace lo mismo que "daw" pero esta vez no borra el espacio siguiente a la palabra que se esta borrando
+
+ "ciw" --> es como change inner word, es casi que igual a "diw", este no borra el espacio al final de la palabra cambiada
+
+ "caw" --> es como el change a word es el equivalente a "daw"
+
+ "das" --> es como delete a sentence, entonces esto borra hasta el siguiente signo de puntuacion
+
+  "dis" --> similar a "das" pero en este caso, los espacios luego del punto, son conservados 
+
+  "dap" --> es como "delete a pharagrap" borra todo un parrafo
+
+  "dip" --> es igual al anterior, pero este mantiene la linea en blanco luego del parrafo borrado 
+
+"ci]" --> este por ejemplo lo que hace es que estando el cursor dentro de un objeto por ejemplo una especie de array, borra todo el contenido del array 
+	si se tiene ['element1', 'red', 'etc'] y ejecutando este comando quedaria [] o tambien se puede con el que cierra
+
+ "ca]" --> para borrar todo incluyendo las llaves
+
+ "ca)" --> Este se usa para lo mismo, pero en este caso seria para parentesis
+ "ci)" --> lo mismo que "ci]"
+ "yi>" --> En este caso copia todo lo que este dentro de <html> (en este caso copiaria la palabra html)
+  "ya>" --> En este caso copia todo <html> (con las llaves y todo)
+  "cit" --> es como change inner tag, sirve para reemplazar todo lo que este dentro de un tag html <p> Esto es un texto </strong> y otro texto <strong> </p>, al ejecutar este comando quedaria <p></p>, esto es en el caso en que me pare en el <p> tag, pero en caso de pararme en el <strong> tag, este reemplazaria el contenido que hay dentro de este tag
+  "cat" --> en este caso hace lo mismo que "cit" pero se lleva los tags tambien
+ _______________________________________________________________________________
+ lo anterior tambien se puede ejecutar con el "d" en lugar de la "c"
+
+  "di}" --> borra todo lo que este dentro de "{}" (tambien se puede ejecutar diB) que seria su equivalente
+  "da}" --> Se lleva todo, incluido los "{}"
+  
+  " ci"  " --> Reemplaza todo lo que este dentro de ""
+  " ca"  " --> reemplaza todo, hasta los "" 
+  (Para lo anterior, tambien se puede con comilla simple) 
+__________________________________________________
+
+
+
+

@@ -1,0 +1,9 @@
+Ayuda de VIM 
+
+para por ejemplo obtener ayuda de un comando en especifico, se escrribe el comando ":help dd" por ejemplo en este caso estamos solicitando ayuda del comando dd
+
+cuando se abre la ayuda, basicamente se abre otra ventana con los comandos de ayuda, para pasarse de una ventana a otra presionar "contro+w+w" osea "control seguido de la tecla w 2 veces"
+
+por ejemplo, si busco ":help dd" y luego busco ":help linewise" para devolverme a la busqueda anterior lo que hago es escribir comandos "control+o"
+
+para salirse del modo "ayuda" se hace una salida normal, presionando las teclas ":q" esto me lleva a mi archivo donde inicie los comandos de ayuda

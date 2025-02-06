@@ -1,0 +1,48 @@
+"f + (caracter deseado a encontrar)" --> en este caso ubica el cursor en el proximo caracter deseado (este comando se hace por linea)
+"F + (caracter deseado a encontrar)" --> en este caso lo que hace es buscar el caracter deseado hacia atras (este comando se hace por linea)
+"2f + (caracter deseado a encontrar)" --> hace lo mismo, pero en este caso, deja el cursor en la segunda ocurrencia (este comando se hace por linea)
+";" --> Para repetir la ultima busqueda hecha -- esto se hace por linea, si en la linea no hay mas caracteres con esa coincidencia, este no se mueve mas.
+"," --> para repetir la busqueda hecha, pero en este caso, lo hace hacia atras
+"t + (caracter deseado a encontrar)" --> En este caso hace algo similar al comando "f" pero, deja el cursor un caracter atras (se puede combinar tambien con los comandos ";" y ",")(este comando se hace por linea)
+"dtw" --> significa, borra hasta la primera ocurrencia (en este caso, borra hasta la "w")(este comando se hace por linea)
+
+"/(palabra deseada a encontrar)" --> Esto buscara la palabra deseada
+"n" --> Lo que hace es econtrar la siguiente ocurrencia dentro de todo el documento
+"N" --> Hace lo mismo que "n" pero en sentido contrario
+
+":set is?" --> Pregunta si el modo "subrayado" esta activado (incremental option)
+":set is" --> Activa el modo subrayado
+":set nois" --> Desactiva el modo subrayado
+
+":set hls" --> subraya todas las coincidencias que se hicieron previamente (highlight option)
+":set hls?" --> pregunta si este modo esta activado
+":nohls" --> desactiva el modo hls para esa ultima busqueda (no descativa el modo para la siguiente busqueda)
+":set nohls" --> Desactiva de todo el modo hls
+
+"cw" Luego "Palabra deseda" --> basicamente hace un reemplazo de la palabra y lñluego "." esto hace que se ejecute el ultimo comando, en este caso, un reemplazo de la palabra
+
+"?(palabra deseada)" --> hace lo mismo que "/(palabra deseada)" pero en reverso, y si luego ejecutamos "n" entonces hace la busqueda inversa sobre todo el documento
+
+ME PARO SOBRE UNA PALABRA X Y LUEGO CORRO ESCRIBO "*", ENTONCES ESTO ME LLEVARA A LA SIGUIENTE OCURRENCIA DE ESA PALABRA (PUEDO UTILIZAR JUNTO A ESTE COMANDO "n" o "N" y tendra el mismo efecto de busqueda a la sigiuente ocurrencia) (este comando basicamente lo que hace es hacer match sobre una palabra completa (lo cual tambien seria diferente de "/(palabra deseada)"))
+
+"#" --> hace lo mismo que el "*" pero en reversa (tambien funcionan los comandos "n" y "N")
+
+"d/THIS" --> Como se puede ver, estos comandos tambien se pueden combinar con otros, en este caso, lo que hace es borrar hasta la proxima ocurrencia donde aparezca un THIS (antesitos de esa ocurrencia)
+
+":s/old/new/" --> Esto substituye cualquier ocurrencia "old" por la "new" (esto solo hace la substitucion en la primera ocurrencia en la linea donde estoy parado)
+":s/old/new/[flags]" --> el flag mas comun es el "g", que es como global, en este caso la substitucion, se hara de manera global en la linea donde estoy parado
+
+":[range]/old/new/flags" --> opera sobre un rango por ejemplo para solo la primer linea ":1s/for/FOR/g" --> para un rango de lineas seria ":1,3s/for/FOR/g", con este comando se puede usar:
+	"." para indicar linea actual
+	"$" para indicar ultima linea
+	".,$" linea actual hasta la ultima linea incluidas
+	"%" para todo el documento
+
+":/PATTERN1/,"/PATTERN2/" --> Este es otro rango, se usa igual, entonces va a hacer el reemplazo en las lineas que esten dentro de ese rango, dentro de esas 2 palabras ":/LOCAL/,/another/s/first/second/g" dentro de las palabras LOCAL Y another va a buscar la palabra first y la reemplazara por la palabra second
+
+":/PATTERN/,$" --> esto indica desde patttern hasta el final del archivo
+
+":set nu" --> lo que hace es mostrar el numero de linea en el editor de texto
+":set nonu" --> Desactiva el numero de linea en el editor de texto --> para prener o apagar de manera mas rapida se podria escribir ":set nu!", esto basicamente aplica para todos los comandos ya vistos
+
+

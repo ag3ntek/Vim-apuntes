@@ -1,0 +1,38 @@
+dd p  --> lo que hace este comando es cortar y lueog pegar en la siguiente linea
+dd P --> lo que hace la "P" en mayuscula es poner la linea cortada arriba de donde esta ubicado el cursor
+x --> para cortar un solo caracter y luego se puede usar "p" para pegar ese carcter un caracter mas adelante
+
+lo que significa normalmente en otros editores vs en vim
+	copy = yank
+	cut = delete
+	paste = put
+"y" seguido de "w" es para copiar una palabra y luego para pegar antes del cursor con "P" o despues del cursor "p"
+
+"2yw" --> con esto se puede hacer una copia de 2 palabras
+"y2w" --> una variante de lo anterior
+"yy" --> para duplicar una linea entera
+"u" --> hace undo de los cambios, del comando entero practicamente
+"ctrl + r" --> hace redo de los cambios
+"dd" y luego "p" --> basicamente esto hace un swap rapido de lineas
+
+
+Tipos de registros en VIM 
+	Unnamed --> que basicamente usamos cuando hacemos un dd o un cut o delete --> es el mismo registro --> ""
+	Numbered --> "0 "1 ..."9
+		"" -> hace referencia a textos de "d","c","s","x" y "y" operations --> este es el unnamed register
+		"0 -> hace referencia al ultimo texto yanked "y" (copied)
+		"1 -> hace referencia al ultimo texto cortado "d" o cambiado "c"
+		"_ -> blackhole register nada pasa en los registros. Basicamente se usa este registro para no afectar el resto de registros
+		los registros enumerados cambian con cada "d" o "c" operation
+		para ver estos registros, entrar al normal mode y escribir ":reg"
+		Para por ejemplo nuevament poner o pegar uno de estos registros, se deberia escribir ("2) seguido de (p)
+
+
+	Name --> Estos son 26, van de la "a" a la "z"
+		Para hacer uso de estos registros, basicamente se hace con por ejemplo "byy donde 
+			--> ("b) hace referencia al registro
+			--> yy hace referencia a la operacion, basicamentem, duplicar la linea entera
+			--> Por ejemplo en el caso de hacer "Ayy basicamente estamos haciendo un append al registro, no estamos sobreescribiendo
+			--> 2"bp --> Esto lo que hace en este caso, es ejecutar el comando 2 veces
+			--> "b2p lo mismo que lo anterior
+

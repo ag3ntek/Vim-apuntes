@@ -1,0 +1,36 @@
+Para insertar texto se presiona la tecla "i" o por el contrario, "shift + i"
+
+"i" --> cambia a modo insert
+"shift + i" --> cambia a modo insert pero el cursor lo deja en el comienzo de la linea
+"a" --> tambien cambia a modo insert, en este caso mueve el cursor una letra mas adelante
+"A" o "shift + a" --> Hace modo insert al final de la linea
+"o" --> cambia a modo insert, pero en este caso lo que hace es un salto de linea
+"shift + o" --> cambaia a modo insert, en este caso deja el cursor para insertar texto arriba de la linea deseada
+"80 + i" luego "(caracter deseado) + esc" lo que hace esto es insertar 80 caracteres desdeados en la linea actual
+"5 + o" luego "(caracter deseado) + esc" en este caso lo que hace es crear el caracter deseado 5 veces por cada linea
+"shift + r" -->  Entra en replace mode, esto lo que hace es escribir sobre los caracteres de la linea actual
+"r + (caracter deseado)" --> se utiliza para reemplazar un solo caracter
+"c + w" --> lo que hace es hacer un cambio de la palabra, es util por ejemplo si la palabra que queremos cambiar es mas pequeña (o mas grande) que la actual por ex cambiar "canine" por "cat" o "cat" por "black cat"
+"c + W" --> lo mismo que lo anterior, solo que este comando tiene en cuenta para su reemplazo el signo de puntuacion
+
+"z + enter" --> lo que hace es ajustar la pantalla, centra mas o menos el cursor
+
+"c + $" --> Desde donde esta el cursor hasta el final de la linea, lo elimina, o es basicamente un "cambio"
+"c + shift" --> hace lo mismo que el anterior comando
+"cc" --> basimanete hace un cambio de la linea entera (osea la borra toda) no importa donde este parado el cursor
+"g~w" --> Este comando lo que hara es hacer mayuscula toda una palabra
+"g~$" --> Esto pasa toda la linea actual a mayusculas
+"g~~" --> Hace un cambio del case: mayusc se vuelve minus y vicebersa.
+
+2 DEL MISMO COMANDO OPERA SOBRE TODA LA LINEA --> ACORDARSE DE ESTO
+
+"g + U + w" --> Pasa la palabra a mayusculas
+"g + U + U" --> Pasa toda la linea a mayusculas
+"g + u" --> Hace lo contrario, pasa a minuscualas
+
+"g + u + u" --> Pasa toda la linea a minusculas
+"shift + j" --> escribe un espacio al final de la linea y sube la linea posterior, dejando o uniendo basicamente 2 lineas si por ejemplo ya habia un espacio al final de la linea, este no agrega mas espacios
+"g + J" --> hace lo del comando anterior, pero sin agregar espacios al final de la linea
+"3 + J" --> en este caso lo que hace es concaternar o unir 3 lineas
+
+

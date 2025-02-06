@@ -1,0 +1,34 @@
+Para moverse en modo normal
+  para moverse abajo --> "j"
+  para moverse arriba --> "k"
+  para moverse derecha --> "l"
+  para moverse izquierda --> "h"
+
+  para moverse "entre palabras" realmente cuando son minusculas, estas saltan entre "puntuation" --> "w" hacia al frente "b" hacia atras
+  Para moverse de manera mas "rapida" --> "W" hacia al frente "B" hacia atras --> estas en mayusculas
+
+  Para moverse al final de una linea con el signo dolar "$"
+  Para moverse al comienzo de una linea, con el signo del sombrero (acordarse por regex) o el numero 0
+
+  Para moverse a una linea especifica, se hace con (por ejemplo para moverse a la linea 2) "2gg"
+  Tambien se puede hacer lo mismo con por ex "2G"  
+  Para moverse al top del archivo, simplemente con un "gg"
+  Para moverse al final del archivo, simplemente con un "G"
+  
+control + f --> todo para abajo
+control + b --> todo para arriba (PUEDE PENSARSE COMO BACK)
+
+~
+~
+~
+~
+
+ESOS SIGNIFICAN FINAL DEL ARCHIVO, O QUE ESTAN MAS ALLA DEL ARCHIVO
+
+-------------------------------------------------
+En line command mode tambien se puede mover entre lineas
+ - escribiendo ":" seguido del numero de la linea deseada y luego "ENTER"
+ - tambien se puede saltar al final del archivo con el comando ":" seguido de "$"
+ - escribiendo ":" seguido de "set ruler" nos da la info de donde estamos parados en el archivo y demas detalles
+-------------------------------------------------
+"esc" seguido de "control" y "g", me muestra la cantidad de lineas que tiene un archivo

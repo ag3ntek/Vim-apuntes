@@ -1,0 +1,17 @@
+Para borrar cosas en VIM, se hace con la x minuscula, en modo normal
+y la x mayuscula, lo que hace es borrar lo que este a la izquierda del cursor
+
+Para hacer el borrado por ejemplo de una palabra completa, se usa el comando "dw", nuevamente, en modo normal "delete word"
+
+"dl" lo que hace es borrar, como un shotcut de "x" (modo normal)
+"dh" es lo mismo que la "X" mayuscula
+"dj" borra la linea actual mas la linea de abajo
+"dk" borra la linea actual mas la linea de arriba
+"d0" borra desde la posicion actual hasta el comienzo de la linea
+"d$" o "D" borra desde la posicion actual, hasta el final de la linea
+"dd" borra toda la linea, no importa en que parte este el cursor
+"3dd" borra tres lineas
+"5dw" borra 5 palabras
+"2d3w" basicamente lo que hara este comando sera borrar 6 palabras
+"." el puntito lo que hace es repetir el ultimo comando escrito
+en VIM el comando "!" es para forzar alguna accion
