@@ -1,6 +1,6 @@
  "daw" --> es como borra una palabra completa no importa donde este ubicado el cursor, este es diferente al comando "dw" que mi cursor esta en medio de una palabra, borra desde donde este, hasta el final de la palabra. (daw borra tambien el espacio que esta despues de la palabra)
 
-"diw" --> es como delte inner word, hace lo mismo que "daw" pero esta vez no borra el espacio siguiente a la palabra que se esta borrando
+ "diw" --> es como delte inner word, hace lo mismo que "daw" pero esta vez no borra el espacio siguiente a la palabra que se esta borrando
 
  "ciw" --> es como change inner word, es casi que igual a "diw", este no borra el espacio al final de la palabra cambiada
 
