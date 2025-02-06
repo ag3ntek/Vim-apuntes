@@ -1,0 +1,53 @@
+" Keep 1000 items in the history.
+set history=1000
+
+" show the cursor position
+set ruler
+
+" show incomplete commands
+set showcmd
+
+" shows a menu when using tab completion
+set wildmenu
+
+
+set scrolloff=5
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" turn on line numbering
+set number
+
+set backup
+" set bex=SOMETHING --> ESTO LO QUE HACE ES QUE CUALQUIER ARCHIVO EDITADO POR
+" VIM, SERA GUARDADO CON LA PALABRA SOMETHING AL FINAL
+
+" Util para codificacion, ya que hace la identacion automatica, basado en la
+" identacion anterior
+set ai
+
+" Es como smart identation es diferente a ai
+set si 
+
+" Modificar los colores por ex el line number y otras cosas de estilo
+" set bg=light
+" set bg=dark
+
+" color slate --> esto modifica el color que usa VIM
+
+" map KEY KEYSTROKES 
+" por ejemplo map <F3> iDaniel Melo Melo<ESC> --> lo que hace es que cuando se
+" oprima la tecla F3, se hara la insercion del texto Daniel Melo Melo (la i es
+" de insert mode)
+"
+" Tambien se puede hacer override de teclas, con map command
+" 
+" map w iDaniel Felipe Melo Melo
+
+
+
+
+

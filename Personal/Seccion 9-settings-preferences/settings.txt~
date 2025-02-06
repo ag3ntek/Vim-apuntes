@@ -1,0 +1,16 @@
+	rc --> basicamente se puede ver como run command
+	Cada user puede tener su propio archivo vimrc
+	Cada linea es ejecutada como un comando 
+		set ruler = :set ruler
+	
+	:version --> de esta manera podemos ver en donde esta el archivo de vimrc tanto de system como de user
+	:set hls? --> por ejemplo en este caso se pregunta si ese comando esta activo o no, para eso sirve el ?
+	:h hls --> activa el modo ayuda de ese comando
+	
+	- en windows, para editar por user el archivo vimrc, se hace por medio de :e ~/_vimrc, en caso de estar en unix systems :e ~/.vimrc
+	- en este archivo la " significa el comienzo de un comentario
+	:h option-list --> Con este comando puedo visualizar los comandos que existen en VIM el equivalente es :options
+	- Se puede modificar el color de VIM, para ver los colores disponibles, se puede usar el comando ":color + control d" 
+
+	- si ya se tiene un archivo de estos, se puede sobreescribir con el comando :mkvimrc!
+
