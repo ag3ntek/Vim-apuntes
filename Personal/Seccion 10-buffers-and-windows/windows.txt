@@ -1,0 +1,47 @@
+ - En VIM una window es una vista de un buffer
+ - por ejemplo cuando se usa el help command, basicamente se abren 2 ventanas
+ - para cerrar una ventana se hace con :q
+
+ - :sp o :split --> basicamente lo que hace es dividir la pantalla horizontalmente
+ - control + w s --> es el equivalente tambien al comando anterior
+ - :sp arch.txt --> con este comando basicamente tendremos 2 windows, cada una con un buffer diferente, pero para esto, el archivo debe estar en buffer
+
+ - :vs o :vsplit --> hace lo mismo que el split, pero en este caso lo hace de manera vertical
+ - :vs o :vsplit --> hace lo mismo que el split, pero en este caso lo hace de manera vertical
+ - SE PUEDEN TENER MAS DE 2 WINDOWS AL MISMO TIEMPO
+ 
+ - control + w o --> esto lo que hace es que cierra el resto de ventanas y me quedo con la actual
+ - :on :only --> es el equivalente al anterior comando
+ - Se pueden hacer combinaciones de ventanas, horizontal split y vertical split
+ - control + w + w  --> esto permite la navegacion entre windows abiertas 
+ - control + w + j --> esto permite saltar desde la ventana actual hasta la de abajo
+ - control + w + k --> permite saltar desde la ventana actual hasta la de arriba
+ - control + w + l --> ... hasta la de la derecha
+ - control + w + h --> ... hasta la de la izquierda
+ 
+ CONTROLAN EL ALTO
+ - control + w + --> esto lo que hace es incrementar el tamaño de la ventana
+ - control + w - --> esto lo que hace es decrementar el tamaño de la ventana
+ 
+ CONTROLAN EL ANCHO
+ - control + w > --> para aumentar el ancho de la ventana
+ - control + w < --> para decrementar el ancho de la ventana
+ 
+ MAXIMIXADORES
+ - control + w _ --> para aumentar al maximo de altura de una ventana
+ - control + w | --> para aumentar al maximo el ancho de una ventana
+ 
+ 
+ - control + w = --> para dejar las ventanas del mismo tamaño
+ - control + w r --> Esto hace una rotacion de pantallas, la ultima se convierte en primera la primera en segunda la segunda en tercera y asi sucesivamente
+ - control + w R --> Esto lo que hace es una rotacion inversa
+ 
+ - control + w + J --> Esto lo que hace es mover la posicion de la ventana actual hasta TODOO abajo
+ - control + w + K --> .... hasta TODO arriba
+ - control + w + L --> ... hasta TODO la derecha
+ - control + w + H --> ... hasta TODO izquierda
+ 
+ - :ball --> para abrir todos los buffers, cada uno con su window
+ - :windo --> esto sirve para ejecutar comandos sobre todos los windows abiertos actualmente
+ 
+

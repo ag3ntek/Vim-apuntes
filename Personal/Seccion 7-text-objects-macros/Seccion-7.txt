@@ -35,7 +35,3 @@
   " ca"  " --> reemplaza todo, hasta los "" 
   (Para lo anterior, tambien se puede con comilla simple) 
 __________________________________________________
-
-
-
-

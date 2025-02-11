@@ -1,0 +1,71 @@
+Mecanismo para tener y manejar multiples archivos
+Buffers --> 	Se usan a cada rato
+		Representacion de memoria de un archivo
+		
+vim arch1.txt arch2.txt arch3.txt
+	- Gracias a los buffers, yo puedo hacer esto y tener varios archivos abiertos a la vez
+	- y si en este modo doy :e arch4.txt, PUES ESTE ARCHIVO TAMBIEN SE ABRIRÁ
+	- y asi sucesivamente podemos abrir mas archivos
+
+vim buf* --> en este caso lo que hace es pattern matching ( AUNQUE ESTO ES MAS DEL SHELL QUE DE VIM)
+
+:buffers --> muestra la lista de archivos abiertos
+:ls --> un equivalente al anterior comando
+
+ESTE SERIA LA SALIDA DE EJEMPLO DEL COMANDO ANTERIOR:
+	:buffers
+  1 %a   "arch1.txt"                    line 1
+  2      "arch2.txt"                    line 0
+  3      "archivoX2.txt"                line 0
+
+ 
+ - unique number por cada archivo
+ - la %a significa indicar indicators and flags 
+ - filename
+ - current position del cursor en ese archivo
+ 
+ - para ir a alguno de estos buffers, por ejemplo para abrir el 2, escribimos
+ 	:buffer 2
+ - :b2 --> es una forma corta de este comando tambien
+ - :b arch2.txt --> otra forma de referirme al buffer 2
+ - y tambien este ultimo comandando se puede hacer autocomplete con TAB
+ - :bnext --> para moverse al siguiente buffer
+ - :bn --> equivalente al anteior comando
+ 
+ - estos comandos se repiten en loop cuando se llega al ultimo
+ 
+ - :bprevious --> para moverse hacia atras en la lista de buffers
+ - :bp --> equivalente al anterior comando
+
+ - :bf --> para referirse al primer buffer
+ - :bl --> para referirse al ultimo buffer
+ 
+ - :b# --> para abrir el ultimo buffer, de manera facil se puede intercambiar de un buffer con otro una forma equivalente de este comando es presionar control + carret simbol
+
+ - %a --> "%" current and y la "a" active and visible
+ - # --> buffer alternativo
+ - + significa que el buffer ha sido modificado pero no han sido guardados
+     - Si tenemos este signo y queremos cambiar de buffer no lo podremos hacer
+ - h --> hidden - guardado en memoria y no mostrado o no visible (esto se pudo haber causado porque modifique el buffer y abri otro con :bn! o alguna de esas variantes)
+	- PARA EVITAR ESTO, TAMBIEN SE PODRIA CON UN COMANDO :set hidden, que basicamente hara el forzado de cambio de buffer sin tener que especificar el "!" - lo que hara este comando es que todos los buffers a los que nos cambiemos, no importa si hicimos cambios o no, estos apareceran como hidden o "h"
+ - i --> inactive que no esta cargado en buffer y tampoco es visible
+ 
+ - :q! --> no deja hacer el guardado, vim redirecciona al buffer no guardado y alli es donde se puede confirmar si definitivamente se quiere salir, o se escriben esos cambios
+ - :qall! --> es para salirse sin guardar de todos los buffers
+ - :wall! --> Sirve para guardar todos los buffers abiertos
+ - :badd archName1.txt arh2.txt --> Agrega mas arhchivos al buffer sin hacer switch
+ - :bd --> esto lo que hace es eliminar el buffer actual
+ 	- este comando tambien se puede usar haciendo referencia al numero del buffer o al nombre del buffer
+ 	- :bd 3
+	- :bd arch.txt
+ 	- :1,3bd --> rango de buffers
+	- :%bd --> para eliminar todos los buffers
+
+- :bufdo set nu --> habilita para todos los buffers numero de lineas
+- :bufdo %s/#/a/g | w --> Reemplazo de caracteres en todos los buffers de manera global, GUARDANDO UNO A UNO LOS CAMBIOS HECHOS
+- :E -->  me permite escoger y abrir en buffer es como una ventana de exploracion, si no se desea abrir ningun buffer, entonces nos podemos salir con :bd
+
+
+
+
+
