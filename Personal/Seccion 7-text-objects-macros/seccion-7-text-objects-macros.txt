@@ -1,0 +1,24 @@
+- como se repiten series de comandos?
+	- Con macros
+
+- Se guardan en los registros
+- q comand seguido de un registro por ejemplo para guardar dentro del registro a seria " qa  "
+- y por ejemplo para usar esa macro, entonces se escribe " @a  " y por ejemplo para usarlo varias veces, entonces se haria con " 5@a " (ejecutaria 5 veces)
+- para ejecutar la macro mas reciente, entonces se escribe " @@ "
+- el orden con buenas practicas seria " qb " --> "0" --> "I" --> "Escribir lo que quiera" --> "esc" --> "j" --> "Y luego q para dejar de grabar" 
+
+- Por ejemplo para que una macro actue sobre un rango especifico de lineas se deberia escribir:
+	:[range]normal @{REGISTER}
+	ex: 3,48 normal @q
+
+
+- Se puede hacer o ejecutar cualquier comando dentro de la grabacion
+- para hacer update de una macro se puede escribir por ejemplo " qC " donde C es el registro deseado a actualizar
+- Para hacer uso de macros en futuros archivos se guarda en .viminfo o _viminfo (este ultimo es para windows)
+- 
+- Otros archivos tambien en .vimrc o _vimrc
+- 
+- Para guardar esro se haria con:
+
+	let @t = 'ITODO: ^[j' --> este seria un ejemplo de una macro guardada en el registro t
+

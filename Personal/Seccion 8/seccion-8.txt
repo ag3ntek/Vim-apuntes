@@ -1,0 +1,39 @@
+Visual mode
+	- Para entrar en este modo se hace con la "v"
+	- Basicamente sirve por ejemplo para resaltar texto, usando lo que ya conocemos "w", "lh".
+	- para moverse por ejemplo en un rango de caracteres que acabo de resaltar, lo hago con la tecla "o"
+	- para por ejemplo subrayar una palabra y el cursor estando en la mitad de esa palabra, se hace con el comando "iw"
+	- Por ejemplo para seleccionar todo un parrafo, se hace por medio de "vap" es como visual mode, all, paragraph
+	
+VISUAL LINE MODE 
+	- Para entrar en este modo es con la letra "V"
+	- Se pueden seleccionar varias lineas con los comandos "jk"
+	- Por ejemplo se puede pasar todo a mayuscula con el comando "shift + u"
+VISUAL BLOCK
+	- "ctrl + v" --> y con esto entramos al modo visual block
+	- "gv" -->  lo que hace es por ejemplo hacer la ultima seleccion hecha
+	- por ejemplo en este modo, se pueden seleccionar varias lineas, y para por ejemplo seleccionar hasta el final de esa cantidad de lineas, se puede usar --> "$"
+	- para por ejemplo hacer un append de un texto en este modo, lo que se hace es seleccionar el bloque, ir al final y luego de eso presionar "shift + a", escribir el texto deseado, luego "esc" y aparecera el texto concatenado al final de cada linea
+	- EN VISUAL MODE EL "i" no funciona, pero si queremos hacer un append al comienzo de una linea o antes de, lo hacemos con el comando "shift + i" y en este caso haria lo mismo que el comando "a"
+	- FUNCIONA TAMBIEN EL COMANDO "c" que basicamente lo que hace es hacer el cambio de palabra sobre varias lineas, ya que estamos hablando del visual block mode
+	- PARA POR EJEMPLO HACER UNA IDENTACION, SE SELECCIONAN TODAS LAS LINEAS DESEADAS, Y LUEGO SE HACE ">"
+	- SI LO ANTERIOR SE QUIERE HACER SOLO CON 1 LINEA, ENTONCES SE ESCRIBE EL COMANDO ">>"
+	- ">i}"  CON  ESTE COMANDO SE PUEDE HACER LO MISMO, SIN NECESARIAMENTE ENTRAR AL VISUAL MODE, DE ESTA MANERA IDENTAREMOS TODO LO QUE ESTE DENTRO DE {}
+	- PARA QUITAR IDENTACION, PUES SE HARIA LO MISMO PERO CON EL OTRO OPERADOR "<"
+	- POR EJEMPLO EN ESTE MODO SE PUEDE HACER SUBSTITUCIONES, HACIENDO LA SELECCION, Y LUEGO OPRIMMIR ":" AHI, VEREMOS '<, '>  
+		 '< --> ESTO REPRESENTA EL COMIENZO DEL VISUAL BLOCK AREA
+		 '> --> ESTO REPRESENTA EL FINAL DEL VISUAL BLOCK AREA
+
+	- :'<,'>s/United States of America/USA --> por ex este comando busca dentro del rango del visual block area el united states of america y lo reemplaza por USA
+	- :'<,'>center --> este comando lo que hace es hacer un centrado del texto (UN SHORTCUT DE ESTO ES ":" y luego "ce")
+	- :'<,'>left --> este comando manda hacia la izquierda todo el texto (UN SHORTCUT DE ESTO ES ":" y luego "le")
+	- :'<,'>right --> esto lo que hace es mover pues el texto a la derecha (UN SHORTCUT DE ESTO ES ":" y luego "ri")
+	-  A ESTOS COMANDOS DE LEFT Y RIGHT TAMBIEN SE LES PUEDE AGREGAR UNA LONGITUD
+	- 
+	
+
+	
+- :set shiftwidth? --> Con este comando se puede visualizar el numero de espacios que usa para la identación
+- :set tabstop? --> Con este comando se puede visualizar cuantos espacios equivale el tab
+- :set list --> en lugar de por ejemplo ver las identaciones como normalmente las veriamos, en este caso vamos a visualizar lo que son los signos literales, de como son por ejemplo en tab se veria asi ^I y el fin de linea $
+- los comandos shiftwidth y el tabstop se pueden establecer nuevos valores, por ejemplo :set shiftwidth=4
