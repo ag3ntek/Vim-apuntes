@@ -1,0 +1,3 @@
+- Se abrirá una ventana adicional cuando se ejecuta, en algunos sistemas los comandos q:
+- SE PUEDE SELECCIONAR CUALQUIER COMANDO Y SER EJECUTADO
+- COMO TAMBIEN SE PUEDE EDITAR UNO DE ESTOS COMANDOS, COMO SI DE UN TEXTO DE GIT SE TRATASE

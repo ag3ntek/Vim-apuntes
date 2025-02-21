@@ -1,0 +1,66 @@
+- El comando global se usa para ejecutar un comando global en multiples lineas de manera simultanea
+ - tiene la sintaxis :g/patrón/comando
+ - en este caso el patron busca todas las lineas que contengan ese patron, manera similar a como funciona el de substitucion
+ 
+
+	POR EJEMPLO YO TENGO 
+		const one = 1;
+		console.log("one: ", one);
+
+		const two = 2;
+		console.log("two: ", two);
+
+		const three = 3;
+		console.log("three: ", three);
+
+	Y PARA ELIMINAR EL CONSOLE.LOG LO CORRO CON EL COMANDO:
+		:g/console/d
+
+	Y QUEDARIA
+		const one = 1;
+
+		const two = 2;
+
+		const three = 3;		
+		
+
+	PARA HACER UNA INVERSION DE ESTO, POR EJEMPLO, ELIMINAR TODAS LAS PALABRAS QUE NO CONTENGAN LA 
+	PALABRA CONSOLE SE HACE CON:
+		:g!/patrón/comando
+		QUE ES LO MISMO QUE :v/patrón/comando, QUEDANDO ASI:
+
+		console.log("one: ", one);
+
+		console.log("two: ", two);
+
+		console.log("three: ", three);
+
+
+	PARA ELIMINAR LINEAS QUE CONTENGAN one y two SE CORRE
+		:g/one\|two/d
+
+	
+	TAMBIÉN SE PUEDE CORRER CON EXPRESIONES REGULARES
+		:g/[0-9]/d --> ELIMINA CUALQUIER LINEA QUE CONTENGA CARACTERES ESEPECIALES
+			SU EQUIVALENTE SERIA :g/\d/d
+
+
+	CON LA COMA: 		
+		:,5g/console/d si no se especifica un número delante de la coma, entonces esto indica que comience el comando desde la línea actual. 
+						Busca la cadena "console" entre la línea actual y la línea 5 y las elimina.
+		:3,g/console/d si no se especifica un número después de la coma, entonces indica que el comando finaliza en la línea actual. 
+						Busca la cadena "console" entre la línea 3 y la línea actual y las elimina.
+		:3g/console/d si solo se le pasa un número sin el símbolo de la coma, esto ejecuta el comando solo en la línea 3. 
+						Busca en la línea 3 y la elimina si existe la cadena "console".
+
+
+	
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+- El comando normal, es un comando que permite la ejecucion de comandos como si estuvieramos en el modo "normal"
+
+	POR EJEMPLO ESTO LO QUE HACE ES INSERTAR UN ; AL FINAL DE LA LINEA 
+		:g/./normal A;
+	ya que es como si estuvieramos ejecutando un "shift + a" en modo normal
